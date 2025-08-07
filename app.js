@@ -16,6 +16,10 @@ app.use(
 app.use (express.json());
 app.use('/api/stocks',stockRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Welcome to StockPulse API');
+});
+
 
 const PORT = process.env.PORT||5000;
 app.listen(PORT ,()=>{
