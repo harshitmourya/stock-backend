@@ -8,11 +8,11 @@ const app = express();
 dotenv.config();
 connectDB()
 
-app.use(
-  cors({
-    origin: "http://localhost:5173", // React app ka origin
-  })
-);
+app.use(cors({
+  origin: ["https://stock-frontend-2gn8lue6e-harshit-mouryas-projects.vercel.app/"], // Replace with your actual Vercel frontend URL
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 app.use (express.json());
 app.use('/api/stocks',stockRoutes);
 
