@@ -9,7 +9,7 @@ dotenv.config();
 connectDB()
 
 app.use(cors({
-  origin: ["https://stock-frontend-roan-one.vercel.app"], // Replace with your actual Vercel frontend URL
+  origin: ["https://stock-frontend-roan-one.vercel.app","http://localhost:5000"], // Replace with your actual Vercel frontend URL
   methods: ["GET", "POST"],
   credentials: true
 }));
